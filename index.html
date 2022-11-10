@@ -5,7 +5,7 @@
         <meta charset="UTF-8"><!--Подключение кодировки на сайте--> 
         <title>Lenni art</title><!--Заголовок для ресурса в верхней строке--> 
         <link rel="preconnect"
-              href="https://fonts.googleapis.com">
+              href="https://fonts.googleapis.com"><!--Подключение стилей шрифта разных размеров--> 
         <link rel="preconnect" 
               href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet"
@@ -18,9 +18,10 @@
     <body class="body"><!----> 
 
         <header class="page-header">
-            <div class="page-header__container">
-             <a href="index.html">
-                <svg width="202" height="147" viewBox="0 0 202 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="page-header__container"><!--Контейнер для шапки страницы--> 
+             <a href="index.html" 
+                class="page-header__logo"><!--Логотип в шапке--> 
+                <svg class="page-header__logo-icon" viewBox="0 0 202 147" fill="none" xmlns="http://www.w3.org/2000/svg"><!--svg код логотипа--> 
                 <rect width="147" height="147" fill="#1F1E1E"/>
                 <path d="M39.9655 72.439H26.6335V50.032H26.6005V49.999H21.9145V73H39.9655V72.439Z" fill="white"/>
                 <path d="M43.9316 73H62.0486V72.439H48.6176V61.285H59.1116V60.691H48.6176V50.56H62.0486V49.999H43.9316V73Z" fill="white"/>
@@ -34,9 +35,9 @@
                 </svg>
             </a>
 
-             <nav class="page-header__nav">
+             <nav class="page-header__nav"><!--Блок навигации--> 
                 <a href="#"
-                   class="page-header__nav-link">Мероприятия</a>
+                   class="page-header__nav-link">Мероприятия</a><!--Элементы блока навигации-->                                     
                 <a href="#"
                    class="page-header__nav-link">Блог</a>
                 <a href="#"
@@ -44,6 +45,12 @@
                 <a href="#"
                    class="page-header__nav-link">Контакты</a>
              </nav>
+
+             <div class="page-header__right-block">
+
+                <a href="#" class="page-header__btn btn">Войти</a><!--Кнопка-->
+                
+             </div>
             
             </div>
         </header>
@@ -51,7 +58,7 @@
             <main class="main">   
             </main>
 
-        <footer class="page-footer">
+        <footer class="page-footer"> <!--Конец страницы--> 
         </footer>
 
     </body>
