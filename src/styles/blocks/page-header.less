@@ -1,0 +1,64 @@
+.page-header {
+    position: fixed;/*Фиксирует пазицию шапки сверху*/
+    top: 0;/*верх*/
+    left: 0;/*прибили к левому краю*/
+    width: 100%;
+    height: 147px;/*Высота шапки*/
+    z-index: 10;
+    background: #FFFFFF;
+    background-color: rgba(222, 222, 222, 0.5);
+
+    @supports (backdrop-filter: blur(20px)) { 
+        background-color: rgba(222, 222, 222, 0.5);
+        backdrop-filter: blur(20px);
+    }
+
+    &__container {
+        .container();
+    
+    }
+
+    &__logo {
+        flex-shrink: 0;/*Отмена сжатия*/
+        width: 202px;/*ширина*/
+        height: 147px;/*высота*/
+        text-decoration: none;/*отмена нижнего подчёркивания для ссылки*/
+        font-size: 0;/*обнуление фона*/
+    }
+
+    &__logo-icon {
+        width: 100%;/*расширение маx*/
+        height: 100%;/*по высоте маx*/
+    }
+    
+    &__nav {
+        margin: 0 auto;/*Центрирование*/
+        display: flex;
+        align-items: baseline;/*выравнивание*/
+    }
+    
+    &__nav-link {
+        margin: 0 25px;/*Назначение отступов(расположение полей)*/
+        text-decoration: none;/*отключение базовых стилей*/
+        font-weight: 600;/*Размер базового шрифта перебивка стилей*/
+        font-size: 18px; 
+        line-height: 1.3;/*Соотношение шрифтов*/
+        color: #1F1E1E;
+        transition: color 0.2s; /*Плавность смены цвета(анимации), обязательно написать с каким свойством трансформация*/
+        
+        &:hover {
+            color: #bc3324;/*hover - смена цвета при наведении*/
+        }
+        
+        &:active {
+            color: #bc3324;/*activ - смена цвета при нажатии*/
+        }
+    }
+
+    &__right-block {
+        display: flex;
+        justify-content: flex-end;/*прибили кнопку к концу блока*/
+        width: 202px;/*чтобы выровнить размер с размером логотипа*/
+    }
+
+}

@@ -1,0 +1,61 @@
+.events-card {
+    display: flex;
+    width: 100%;
+    margin: 0 30px 120px;
+    max-width: 405px;
+    min-width: 280px;
+    width: calc(33.333% - 60px);
+
+        &__link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-decoration: none;
+        }
+        
+        &__picture {
+        display: block;
+        position: relative;
+        }
+        
+        &__picture::before {
+        content: '';
+        position: relative;
+        display: block;
+        padding-top: 107.16%;
+        width: 100%;
+        }
+        
+        &__img {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute; /*- Помогите пожалуйста, после этого изменения все фото изчезают с сайта*/
+        }
+        
+        &__title {
+        text-decoration: none;/*отключение базовых стилей*/
+        font-weight: 700;/*Размер базового шрифта перебивка стилей*/
+        font-size: 24px;
+        line-height: 1.3;/*Соотношение шрифтов*/
+        color: #1F1E1E;
+        }
+        
+        &__text {
+        text-decoration: none;/*отключение базовых стилей*/
+        font-weight: 400;/*Размер базового шрифта перебивка стилей*/
+        font-size: 16px;
+        line-height: 1.3;/*Соотношение шрифтов*/
+        color: #1F1E1E;
+        }
+        
+        &__time {
+        text-decoration: none;/*отключение базовых стилей*/
+        font-weight: 300;/*Размер базового шрифта перебивка стилей*/
+        font-size: 14px;
+        line-height: 1.3;/*Соотношение шрифтов*/
+        color: #1F1E1E;
+        }
+    }

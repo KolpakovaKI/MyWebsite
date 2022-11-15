@@ -1,0 +1,348 @@
+html,
+body {
+  margin: 0;
+  /*Обнуление отступов*/
+  padding: 0;
+  /*Обнуление внутренних отступов*/
+  width: 100%;
+}
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Общая ширина и высота элемента*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*включение Flex блоков*/
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*Вертикальное расположение блоков*/
+  min-height: 100vh;
+  /*Минимальная высота блока*/
+  padding-top: 147px;
+  /*заложили место для шапки чтоб не наезжало*/
+  background-color: #DEDEDE;
+  background-image: url('../assets/images/noise.png');
+  background-position: 0 0, 0 0;
+  background-size: auto, 100% auto;
+  background-repeat: repeat, repeat-y;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.375;
+  color: #1F1E1E;
+  overflow-x: hidden;
+}
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  /*Растягиваеться по высоте, не сжимаеться, авто высота*/
+}
+.page-footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  /*Не растягиваеться по вертикали, не сжимаеться, высота авто*/
+}
+a {
+  color: #1F1E1E;
+  outline: none;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@font-face {
+  font-family: 'mak';
+  src: url('../assets/fonts/MAK-bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mak';
+  src: url('../assets/fonts/MAK-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+.btn {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Отступы чтобы учитывались внутри блока*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*включение Flex блоков стиля*/
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*Центрирование всего содержимого*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*Ещё центрирование внутреннего содержимого*/
+  padding: 15px 40px;
+  /*Отступы по вертикали и горизонтали*/
+  border: 1px solid #1F1E1E;
+  /*Рамка кнопки*/
+  background-color: transparent;
+  /*Включение прозрачного заднего фона*/
+  text-decoration: none;
+  /*отключение базовых стилей текста*/
+  outline: none;
+  /*отключение стиля жирной рамки*/
+  font-weight: 600;
+  /*Размер шрифта*/
+  font-size: 16px;
+  /*Размер шрифта в пикселей*/
+  line-height: 1.3;
+  /*соотношение размера шрифта*/
+  text-align: center;
+  /*Центрирование текста*/
+  color: #1F1E1E;
+  /*Цвет текста*/
+  -webkit-transition: color 0.2s, background;
+  -o-transition: color 0.2s, background;
+  transition: color 0.2s, background;
+  /*смена цвета текста и заднего фона*/
+}
+.btn:hover {
+  /*смена цвета при наведении и нажатии*/
+  color: #FFFFFF;
+  /*смена цвета текста*/
+  background-color: #1F1E1E;
+  /*смена заднего фона*/
+}
+.btn:active {
+  /*смена цвета при наведении и нажатии*/
+  color: #FFFFFF;
+  /*смена цвета текста*/
+  background-color: #1F1E1E;
+  /*смена заднего фона*/
+}
+.events-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 30px 120px;
+  max-width: 405px;
+  min-width: 280px;
+  width: calc(33.333% - 60px);
+}
+.events-card__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  text-decoration: none;
+}
+.events-card__picture {
+  display: block;
+  position: relative;
+}
+.events-card__picture::before {
+  content: '';
+  position: relative;
+  display: block;
+  padding-top: 107.16%;
+  width: 100%;
+}
+.events-card__img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  /*- Помогите пожалуйста, после этого изменения все фото изчезают с сайта*/
+}
+.events-card__title {
+  text-decoration: none;
+  /*отключение базовых стилей*/
+  font-weight: 700;
+  /*Размер базового шрифта перебивка стилей*/
+  font-size: 24px;
+  line-height: 1.3;
+  /*Соотношение шрифтов*/
+  color: #1F1E1E;
+}
+.events-card__text {
+  text-decoration: none;
+  /*отключение базовых стилей*/
+  font-weight: 400;
+  /*Размер базового шрифта перебивка стилей*/
+  font-size: 16px;
+  line-height: 1.3;
+  /*Соотношение шрифтов*/
+  color: #1F1E1E;
+}
+.events-card__time {
+  text-decoration: none;
+  /*отключение базовых стилей*/
+  font-weight: 300;
+  /*Размер базового шрифта перебивка стилей*/
+  font-size: 14px;
+  line-height: 1.3;
+  /*Соотношение шрифтов*/
+  color: #1F1E1E;
+}
+.listing__events-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -30px;
+}
+.reserve {
+  display: grid;
+  gap: 65px 11%;
+  grid-template-columns: 405px calc(89% - 405px);
+  grid-template-areas: "checks scheme" "order legend";
+  width: 100%;
+}
+.reserve__checks {
+  grid-area: checks;
+}
+.reserve__order {
+  grid-area: order;
+}
+.reserve__scheme {
+  grid-area: scheme;
+}
+.reserve__scheme {
+  grid-area: scheme;
+}
+.events {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  max-width: 1414px;
+  width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.event {
+  padding: 40px 0 150px;
+}
+.page-header {
+  position: fixed;
+  /*Фиксирует пазицию шапки сверху*/
+  top: 0;
+  /*верх*/
+  left: 0;
+  /*прибили к левому краю*/
+  width: 100%;
+  height: 147px;
+  /*Высота шапки*/
+  z-index: 10;
+  background: #FFFFFF;
+  background-color: rgba(222, 222, 222, 0.5);
+}
+@supports ((-webkit-backdrop-filter: blur(20px)) or (backdrop-filter: blur(20px))) {
+  .page-header {
+    background-color: rgba(222, 222, 222, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+}
+.page-header__container {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /*Отступы чтобы учитывались внутри блока*/
+  margin: 0 auto;
+  /*Для центрирования*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /*Чтобы раскидать по горизонтали*/
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*Центрирование элементов*/
+  max-width: 1414px;
+  /*Максимальная ширина 1334+40+40 для отступов*/
+  width: 100%;
+  padding-left: 40px;
+  /*Чтобы не прилепало к леву*/
+  padding-right: 40px;
+  /*Чтобы не прилепало к праву*/
+}
+.page-header__logo {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  /*Отмена сжатия*/
+  width: 202px;
+  /*ширина*/
+  height: 147px;
+  /*высота*/
+  text-decoration: none;
+  /*отмена нижнего подчёркивания для ссылки*/
+  font-size: 0;
+  /*обнуление фона*/
+}
+.page-header__logo-icon {
+  width: 100%;
+  /*расширение маx*/
+  height: 100%;
+  /*по высоте маx*/
+}
+.page-header__nav {
+  margin: 0 auto;
+  /*Центрирование*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  /*выравнивание*/
+}
+.page-header__nav-link {
+  margin: 0 25px;
+  /*Назначение отступов(расположение полей)*/
+  text-decoration: none;
+  /*отключение базовых стилей*/
+  font-weight: 600;
+  /*Размер базового шрифта перебивка стилей*/
+  font-size: 18px;
+  line-height: 1.3;
+  /*Соотношение шрифтов*/
+  color: #1F1E1E;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  transition: color 0.2s;
+  /*Плавность смены цвета(анимации), обязательно написать с каким свойством трансформация*/
+}
+.page-header__nav-link:hover {
+  color: #bc3324;
+  /*hover - смена цвета при наведении*/
+}
+.page-header__nav-link:active {
+  color: #bc3324;
+  /*activ - смена цвета при нажатии*/
+}
+.page-header__right-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  /*прибили кнопку к концу блока*/
+  width: 202px;
+  /*чтобы выровнить размер с размером логотипа*/
+}
